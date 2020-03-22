@@ -11,7 +11,7 @@ function getRequest(url) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        observer.next(data);
+        observer.next(data.messages);
         observer.complete();
       })
       .catch(err => observer.error(err));
